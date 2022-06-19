@@ -1,11 +1,23 @@
 import React from  'react';
-import {View, Text} from 'react-native';
 
-export function Home()
+import { Container, Header, Content } from './styles';
+
+import { Input } from '../../components/Input';
+
+import { Card } from '../../components/Card';
+
+import vexImg from '../../assets/vex.jpg';
+
+export default function Home()
 {
     return (
-        <View style={{ flex:1, justifyContent:'center', alignItems:'center'}}>
-            <Text>Home</Text>
-        </View>
+        <Container>
+            <Header source={vexImg}>
+                <Input placeholder='Pesquisar...'/>
+            </Header>
+            <Content>
+                <Card/>
+            </Content>
+        </Container>
     );
 }
